@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nokia Snake Classic</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="game-container">
+    <canvas id="game-canvas" width="400" height="400"></canvas>
+    <div id="score-display">Score: 0</div>
+    <div id="level-display">Level: 1</div>
+    <div id="game-over">
+      GAME OVER<br>
+      <span id="final-score">Score: 0</span><br>
+      <span id="final-level">Level: 1</span><br>
+      <button id="restart-button">Play Again</button>
+    </div>
+    <div id="start-screen">
+      <h1>SNAKE</h1>
+      <button id="start-button">START GAME</button>
+      <div class="controls">
+        Use arrow keys or buttons<br>
+        Eat the food to grow<br>
+        Reach 100 points to level up<br>
+        Don’t hit walls or yourself!
+      </div>
+    </div>
+    <div class="nokia-brand">NOKIA 3310</div>
+  </div>
+
+  <!-- Mobile controls -->
+  <div id="mobile-controls">
+    <div class="control-row">
+      <div class="control-button" data-dir="up">↑</div>
+    </div>
+    <div class="control-row">
+      <div class="control-button" data-dir="left">←</div>
+      <div class="control-button" data-dir="down">↓</div>
+      <div class="control-button" data-dir="right">→</div>
+    </div>
+  </div>
+
+  <!-- Link external JS -->
+  <script src="script.js"></script>
+</body>
+</html>

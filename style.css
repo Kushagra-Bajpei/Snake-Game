@@ -1,0 +1,112 @@
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #222;
+  font-family: 'Courier New', monospace;
+}
+#game-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 1/1;
+  border: 16px solid #333;
+  border-radius: 20px;
+  background-color: #000;
+  box-shadow: 0 0 30px rgba(0,0,0,0.5);
+}
+#game-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+}
+#score-display, #level-display {
+  position: absolute;
+  top: 10px;
+  color: #fff;
+  font-size: 18px;
+}
+#score-display { right: 10px; }
+#level-display { left: 10px; }
+#game-over {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  color: #ff0000;
+  font-size: 32px;
+  text-align: center;
+  display: none;
+}
+#start-screen {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0,0,0,0.8);
+  color: #00ff00;
+  text-align: center;
+}
+#start-button, #restart-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #333;
+  color: #00ff00;
+  border: 2px solid #00ff00;
+  font-family: inherit;
+  font-size: 18px;
+  cursor: pointer;
+}
+#start-button:hover, #restart-button:hover {
+  background: #00ff00;
+  color: #000;
+}
+.controls {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #fff;
+}
+.nokia-brand {
+  position: absolute;
+  bottom: 10px; left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  color: #fff;
+  opacity: 0.5;
+}
+
+/* Mobile controls */
+#mobile-controls {
+  display: none;
+  width: 100%;
+  max-width: 400px;
+  margin-top: 20px;
+}
+.control-row {
+  display: flex;
+  justify-content: center;
+  margin: 5px 0;
+}
+.control-button {
+  width: 70px; height: 70px;
+  margin: 5px;
+  background: rgba(51,51,51,0.7);
+  border: 2px solid #00ff00;
+  border-radius: 50%;
+  color: #00ff00;
+  font-size: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+}
+@media (max-width: 480px) {
+  #mobile-controls { display: block; }
+}
